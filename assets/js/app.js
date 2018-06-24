@@ -31,12 +31,6 @@ $(document).ready(function(){
         event.preventDefault();
     });
 
-    console.log($("#cars-buttons").andSelf().html());
-
-    $(document).on("click",".imageFavorite",function(){
-        console.log($(this).html());
-        favorites.push($(this).val());
-    });
 
     $(document).on("click",".gifplay", function() {
         var car = $(this).text();
@@ -61,10 +55,6 @@ $(document).ready(function(){
             });
         });
     });
-
-    $( window ).unload(function() {
-        localStorage.setItem("favorites",favorites);
-      });
 });
 
 function renderButtons() {
